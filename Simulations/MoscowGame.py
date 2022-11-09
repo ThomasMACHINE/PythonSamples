@@ -5,7 +5,6 @@ import numpy as np
 # tolerance = bets in a row they can lose
 # goal = Percentage increase wanted
 def doGamble(start, goal, tolerance):
-
     total = start
     goal = start * (1+(goal/100))
     bet = 0
@@ -22,14 +21,17 @@ def doGamble(start, goal, tolerance):
             return 0
 
         win = randint(0,1)
-
         if(win == 1):
             total += bet
             bet = 0
         else:
             total = total - bet
     return total
-        
+
+# Conditions, start and end is the tolerances (amount of times you can lose)
+# Participants = number of simulations for each tolerance
+# StartMoney = Start value, Any value grants same results but grants meaning to the calculations
+# Wealth Increase = Percentage of wealth increase wanted
 start = 1
 end = 17
 participants = 10000
@@ -47,7 +49,6 @@ for i in range(start,end):
     loserCount.append(perc)
 
 xpoints = np.array(loserCount)
-
 
 plt.plot(xpoints)
 plt.xlabel("tolerance (bets they can lose in a row)")
