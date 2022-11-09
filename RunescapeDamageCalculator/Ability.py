@@ -9,6 +9,9 @@ Damage dealt by abilities are picked uniformally within the lower and higher bou
             of the abilitys damage range
 '''
 class Ability:
+    '''
+    These are variables on a character and based set as the highest achieveable stats
+    '''
     # Static variables
     AD = 1686
     base_level = 99

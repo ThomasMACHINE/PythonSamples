@@ -1,3 +1,6 @@
+'''
+To learn more about Ability, look in Ability.py
+'''
 from Ability import Ability
 
 AbilityInfo = open("Abilities.csv", "r")
